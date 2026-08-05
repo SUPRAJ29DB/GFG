@@ -1,7 +1,3 @@
-#include <vector>
-#include <algorithm>
-#include <climits>
-
 class Solution {
 public:
     int kthElement(std::vector<int>& a, std::vector<int>& b, int k) {
@@ -14,8 +10,8 @@ public:
         }
 
         // Define valid search boundaries for elements taken from array 'a'
-        int low = std::max(0, k - m);
-        int high = std::min(k, n);
+        int low = max(0, k - m);
+        int high = min(k, n);
 
         while (low <= high) {
             int mid1 = low + (high - low) / 2;
